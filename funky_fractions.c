@@ -45,7 +45,7 @@ int is_funky_fraction(int denominator) {
         int overlap = denominator / divisor;
         int reduced_denominator = denominator % divisor;
 
-        if (reduced_denominator == 0 || digits(reduced_denominator) + 1 < cut_index) {
+        if (reduced_denominator == 0 || digits(reduced_denominator) < cut_index) {
             continue;
         }
 

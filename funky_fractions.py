@@ -1,7 +1,7 @@
 import time
 
 
-LIMIT = 10_000_000
+LIMIT = 1_000_000
 
 
 def digits(n):
@@ -46,7 +46,7 @@ def is_funky_fraction(denominator):
 
         # if reduced denominator starts with a zero, skip it
         # if not using strings, we could make sure that the number of digits is expected
-        if reduced_denominator == 0 or digits(reduced_denominator) + 1 < cut_index:
+        if reduced_denominator == 0 or digits(reduced_denominator) < cut_index:
             continue
 
         # see if there's an integer solution
